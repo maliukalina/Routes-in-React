@@ -3,6 +3,8 @@ import {
   Switch,
   Route,
   NavLink} from 'react-router-dom'
+import About from './components/About';
+import Home from './components/home/Index';
 import './App.css'
 
 function App() {
@@ -20,14 +22,13 @@ function App() {
       </nav>
     </header>
     <Switch>
-    <Route exact path ='/'>
-        <h1>Home</h1>
-        </Route>
+    <Route exact path ='/' component={Home} />
+        
       <Route path ='/contact'>
         <h1>Contact us</h1>
         </Route>
         <Route path ='/about'>
-        <h1>About us</h1>
+        <About />
         </Route>
         <Route path ='/'>
         <h1>404 Page not found</h1>
